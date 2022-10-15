@@ -1,0 +1,165 @@
+/* 초기화 영역 */
+html, body, div, header, nav, section, article, aside, footer, figure, figcaption,
+legend, ul,ol,li,dl,dt,dd,h1,h2,h3,h4,p{
+    margin: 0px;
+    padding: 0px;
+}
+ul {
+    list-style: none;
+}
+fieldset {
+    border: 0;
+}
+.hidden, legend {
+    display: none;
+}
+body,html{
+    font-size: 16px;
+    /* 기본폰트 사이즈 지정 */
+}
+
+a{
+    text-decoration: none;
+    color: #111;
+}
+
+body{
+    position: relative;
+}
+
+
+
+
+
+
+
+/*////////////////////////////////*/
+
+
+/* 상단메뉴 */
+header {
+    position: relative;
+
+    width: 100%;
+    height: 75px;    
+
+    z-index: 40;
+}
+
+#logo {
+    position: absolute;
+    left: 2%;
+    top: 20%;
+}
+
+#logo > a{
+    color: #fff;
+}
+header{
+    /* 상단메뉴 고정*/
+    position: fixed;
+    top: 0%;
+}
+
+/* 메뉴부분*/
+nav {
+    width: 100%;
+    height: 100%;
+    display: inline-block;
+
+
+    text-align: center;
+
+    margin: 0 auto;
+
+    transition: all 0.4s;
+
+    /* 상단메뉴 임시 bg색상 */
+}
+.main-menu{
+    display: inline-block;
+}
+
+
+.main-menu>li{
+    float: left;
+
+    padding: 0 40px;
+    margin-top: 20px;
+    box-sizing: border-box;
+
+    transition: all 0.2s;
+}
+.main-menu>li a {
+    font-size: 1.2em;
+    color: #fff;
+
+    position: relative;
+}
+
+nav:hover  {
+    background-color: #fff;
+    transition: all 0.4s;
+}
+nav:hover li a {
+    color: #111;
+}
+nav:hover>.main-menu>li {
+    padding: 0 50px;
+    transition: all 0.2s;
+}
+
+.sub-menu{
+    display: none;
+}
+
+
+/* 서브메뉴 */
+.sub-menu {
+    text-align: center;
+}
+
+
+
+
+
+/* 배너영역 */
+#banner {
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+
+    text-shadow: 2px 2px 2px #111;
+}
+.banner_img
+.banner1{
+    display: inline-block;
+    width: 100%;
+    height: 100vh;
+    background-image: url(../images/보발재.jpg);
+    background-position: center;
+}
+
+/* 폰트 위치 */
+.banner > h3 {
+    font-family: 'Dongle', sans-serif;
+
+    color: #fff;
+    font-size: 5em;
+
+    position: relative;
+    top: 30%;
+    text-align: center;
+}
+.banner > p {
+    color: #fff;
+    font-size: 2em;
+    
+    position: relative;
+    top: 30%;
+    text-align: center;
+}
+.sub_t {
+    opacity: 0.7;
+}
