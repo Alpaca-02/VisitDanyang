@@ -50,6 +50,8 @@ header {
     position: absolute;
     left: 2%;
     top: 20%;
+
+    text-shadow: 2px 2px 2px #222;
 }
 
 #logo > a{
@@ -98,7 +100,7 @@ nav {
 }
 
 nav:hover  {
-    background-color: #fff;
+    background-color: rgba(255, 255, 255, 0.7);
     transition: all 0.4s;
 }
 nav:hover li a {
@@ -109,14 +111,21 @@ nav:hover>.main-menu>li {
     transition: all 0.2s;
 }
 
+/* 서브메뉴 */
 .sub-menu{
     display: none;
-}
-
-
-/* 서브메뉴 */
-.sub-menu {
     text-align: center;
+}
+/* 우측 아이콘*/
+.icon-menu{
+    position: absolute;
+    right: 5%;
+    top: 10%;
+}
+.icon-menu>ul>li{
+    float: left;
+    margin-right: 10px;
+    font-size: 1.5em;
 }
 
 
@@ -131,23 +140,47 @@ nav:hover>.main-menu>li {
     top: 0;
 
     text-shadow: 2px 2px 2px #111;
+
+    /*슬라이드 완성후 추가할 히든*/
+    /* overflow: hidden; */
 }
-.banner_img
-.banner1{
-    display: inline-block;
-    width: 100%;
+.banner_img{
+    width: 400%;
     height: 100vh;
-    background-image: url(../images/보발재.jpg);
+    position: relative;
+
+}
+.banner{
+    width: 25%;
+    height: 100vh;
+
     background-position: center;
+
+    /* 임시작성 백그라운드 이미지 사이즈 !!!!! <- 나중 수정*/
+    background-size: 100%;
+
+    float: left;
+}
+.banner1{
+    background-image: url(../images/만천하_스카이워크.jpg);
+}
+.banner2{
+    background-image: url(../images/보발재.jpg);
+}
+.banner3{
+    background-image: url(../images/단양강_잔도.jpg);
+}
+.banner4{
+    background-image: url(../images/단양_도담삼봉.jpg);
 }
 
 /* 폰트 위치 */
 .banner > h3 {
     font-family: 'Dongle', sans-serif;
-
+    
     color: #fff;
     font-size: 5em;
-
+    
     position: relative;
     top: 30%;
     text-align: center;
@@ -163,3 +196,47 @@ nav:hover>.main-menu>li {
 .sub_t {
     opacity: 0.7;
 }
+
+
+/* 배너 버튼 */
+#banner_btn{
+    position: absolute;
+    top: 60%;
+    width: 100%;
+
+
+}
+
+.c_btn{
+    width: 50px;
+    height: 50px;
+    background-color: #ccc;
+    border-radius: 50%;
+
+    float: left;
+}
+
+/* 단양 추천 여행지 영역 시작 */
+    #travel_reco{
+        position:absolute;
+        top: 100vh;
+
+        width: 100%;
+        height: 100vh;
+
+        background-color: lightblue;
+    }
+/* 단양 추천 여행지 영역 종료 */
+
+
+/* 단양 이달의 행사 시작 */
+#fes_month{
+    position:absolute;
+    top: 200vh;
+
+    width: 100%;
+    height: 100vh;
+
+    background-color: lightgreen;
+}
+/* 단양 이달의 행사 종료 */
