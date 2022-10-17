@@ -27,7 +27,10 @@ body{
     position: relative;
 }
 
-
+@font-face {
+    font-family: 'danjung';
+    src: url('../fonts/Cafe24Danjunghae.ttf') format('truetype');
+}
 
 
 
@@ -79,6 +82,7 @@ nav {
 
 
     text-align: center;
+    align-items: center;
 
     margin: 0 auto;
 
@@ -107,13 +111,11 @@ nav {
     position: relative;
 }
 
-nav:hover  {
+/* nav:hover  {
     background-color: rgba(255, 255, 255, 0.7);
     transition: all 0.4s;
-}
-nav:hover li a {
-    color: #111;
-}
+} */
+
 nav:hover>.main-menu>li {
     padding: 0 50px;
     transition: all 0.2s;
@@ -122,6 +124,8 @@ nav:hover>.main-menu>li {
 /* 서브메뉴 */
 .sub-menu{
     display: none;
+
+    margin-top: 5%;
     text-align: center;
 }
 /* 우측 아이콘*/
@@ -170,10 +174,10 @@ nav:hover>.main-menu>li {
     float: left;
 }
 .banner1{
-    background-image: url(../images/만천하_스카이워크.jpg);
+    background-image: url(../images/보발재.jpg);
 }
 .banner2{
-    background-image: url(../images/보발재.jpg);
+    background-image: url(../images/만천하_스카이워크.jpg);
 }
 .banner3{
     background-image: url(../images/단양강_잔도.jpg);
@@ -184,10 +188,10 @@ nav:hover>.main-menu>li {
 
 /* 폰트 위치 */
 .banner > h3 {
-    font-family: 'Dongle', sans-serif;
+    font-family: 'danjung', sans-serif;
     
     color: #fff;
-    font-size: 5em;
+    font-size: 4em;
     
     position: relative;
     top: 30%;
@@ -209,19 +213,23 @@ nav:hover>.main-menu>li {
 /* 배너 버튼 */
 #banner_btn{
     position: absolute;
+    display: flex;
     top: 60%;
     width: 100%;
+    align-content: center;
 
-
+    justify-content: center;
 }
 
 .c_btn{
-    width: 50px;
-    height: 50px;
-    background-color: #ccc;
-    border-radius: 50%;
+    position: relative;
+    margin:0 10px;
+}
+.c_btn>i {
+    font-size: 1.5em;
+    cursor: pointer;
 
-    float: left;
+    color: #fff;
 }
 
 /* 단양 추천 여행지 영역 시작 */
