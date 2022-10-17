@@ -35,6 +35,14 @@ body{
 
 /*////////////////////////////////*/
 
+html{
+    overflow: hidden;
+}
+html, body {
+    display: block;
+    height: 100%;
+    width: 100%;
+}
 
 /* 상단메뉴 */
 header {
