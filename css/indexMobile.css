@@ -1,0 +1,22 @@
+
+@media screen and (max-width:580px){
+    .main-menu{
+        display: none;
+    }
+    
+    
+    
+    /* 배너 */
+    .banner{
+        /* background-size: auto 100%; */
+    }
+    .banner > .banner_title{
+        font-size: 2.3em;
+    }
+    .banner > p{
+        font-size: 1.5em;
+    }
+}
+
+
+/* 배너 영역 */

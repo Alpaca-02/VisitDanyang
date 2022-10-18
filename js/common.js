@@ -1,16 +1,44 @@
 $(function(){
+    // 브라우저 시작시 배너 텍스트 애니메이션 동작
+    $('.banner').eq(0).find('.b_ani').addClass('b_vis');
+    $('.banner').eq(0).find('.sub_t').addClass('b_vis_sub');
+
+    // 브라우저 시작시 최상단으로 이동
+    // window.scrollTo(0, 0);
+
+
+    function nav_colored(){
+        $('nav').css('background-color','rgba(255, 255, 255, 0.8)');
+        $('nav a').css('color','#111')
+        .css('text-shadow','none');
+        $('#logo>a').css('color','#86c036')
+        .css('text-shadow','none');
+        
+    }
+
+    function nav_nonColor(){
+        $('nav').css('background-color','')
+        $('nav a').css('color','#fff')
+        .css('text-shadow','3px 3px 3px #222');
+        $('#logo>a').css('color','#fff')
+        .css('text-shadow','2px 2px 2px #222');
+    }
+
 
     //상단메뉴바
     $('.main-menu').mouseover(function(){
-        $('nav').css('background-color','rgba(255, 255, 255, 0.8)')
-        .css('height','20vh');
+        nav_colored();
+        $('.main-menu>li').css('padding','0 50px');
+        $('nav').css('height','20vh');
         $('.sub-menu').stop().slideDown(300,'linear');
         $('nav a').css('color','#111');
     })
     $('nav').mouseout(function(){
-        $('nav').css('background-color','')
-        .css('height','100%');;
-        $('.sub-menu').stop().slideUp(300,'linear');
+        nav_nonColor();
+        $('nav').css('height','100%');
+        $('.sub-menu').stop().slideUp(300,'linear',function(){
+            $('.main-menu>li').css('padding','0 40px');
+        });
         $('nav a').css('color','#fff');
     })
 
@@ -51,11 +79,9 @@ mHtml.animate({scrollTop : 0},10);
         let scroll = document.documentElement.scrollTop;
         console.log(document.documentElement.scrollTop);
         if(scroll > 10){
-            $('nav').css('background-color' , 'rgba(255, 255, 255, 0.8)');
-            $('nav a').css('color' , '#111');
+            nav_colored();
         }else {
-            $('nav').css('background-color', '');
-            $('nav a').css('color' , '#fff');
+            nav_nonColor();
         }
     });
 
@@ -67,7 +93,13 @@ mHtml.animate({scrollTop : 0},10);
         let window_W = $( window ).width();
         $('.banner_img').animate({
             left: -(window_W*index)
-        },'slow');
+        },500,function(){
+            $('.banner').eq(index).find('.b_ani').addClass('b_vis');
+            $('.banner').eq(index).find('.sub_t').addClass('b_vis_sub');
+        });
+        $('.b_ani').removeClass('b_vis');
+        $('.sub_t').removeClass('b_vis_sub');
+
 
     }
 
@@ -83,7 +115,7 @@ mHtml.animate({scrollTop : 0},10);
 
     // 화면크기 변화 감지
     $( window ).resize(function() {
-
+        // $('.c_btn').eq(0).trigger('click');
     });
 
 

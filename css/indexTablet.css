@@ -1,0 +1,16 @@
+@media screen and (max-width:1270px) {
+    
+    .main-menu{
+        display: none;
+    }
+    
+    .banner{
+        /* background-size: auto 100%; */
+    }
+    .banner > .banner_title{
+        font-size: 3em;
+    }
+    .banner > p{
+        font-size: 1.5em;
+    }
+}

@@ -31,6 +31,18 @@ body{
     font-family: 'danjung';
     src: url('../fonts/Cafe24Danjunghae.ttf') format('truetype');
 }
+@font-face {
+    font-family: 'dangdang';
+    src: url('../fonts/Cafe24Dangdanghae.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'happy-reg';
+    src: url('../fonts/Happiness-Sans-Regular.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'happy-bold';
+    src: url('../fonts/Happiness-Sans-Bold.ttf') format('truetype');
+}
 
 
 
@@ -59,10 +71,16 @@ header {
 
 #logo {
     position: absolute;
+    font-family: 'dangdang', sans-serif;
+
+    font-size: 2.5em;
+
     left: 2%;
-    top: 20%;
+    top: 25%;
 
     text-shadow: 2px 2px 2px #222;
+
+    transition: all 1s;
 }
 
 #logo > a{
@@ -92,10 +110,13 @@ nav {
 }
 .main-menu{
     display: inline-block;
+
+    margin-top: 0.3%;
 }
 
 
 .main-menu>li{
+
     float: left;
 
     padding: 0 40px;
@@ -105,39 +126,44 @@ nav {
     transition: all 0.2s;
 }
 .main-menu>li a {
+    font-family: 'happy-bold', sans-serif;
     font-size: 1.2em;
     color: #fff;
 
     position: relative;
-}
 
-/* nav:hover  {
-    background-color: rgba(255, 255, 255, 0.7);
-    transition: all 0.4s;
-} */
-
-nav:hover>.main-menu>li {
-    padding: 0 50px;
     transition: all 0.2s;
+    text-shadow: 3px 3px 3px #222;
 }
+
 
 /* 서브메뉴 */
 .sub-menu{
     display: none;
+    position: inline;
 
-    margin-top: 5%;
+    margin-top: 12%;
     text-align: center;
+    /* transition: color 0.5s; */
 }
 /* 우측 아이콘*/
 .icon-menu{
     position: absolute;
     right: 5%;
-    top: 10%;
+    top: 32%;
+
 }
 .icon-menu>ul>li{
     float: left;
     margin-right: 10px;
     font-size: 1.5em;
+
+    font-family: 'happy-bold', sans-serif;
+
+}
+.icon-menu>ul>li>a{
+    color: #fff;
+    text-shadow: 2px 2px 3px #222;
 }
 
 
@@ -151,7 +177,7 @@ nav:hover>.main-menu>li {
     position: absolute;
     top: 0;
 
-    text-shadow: 2px 2px 2px #111;
+    text-shadow: 5px 5px 2px #111;
 
     /*슬라이드 완성후 추가할 히든*/
     /* overflow: hidden; */
@@ -167,9 +193,10 @@ nav:hover>.main-menu>li {
     height: 100vh;
 
     background-position: center;
+    background-repeat: no-repeat;
 
     /* 임시작성 백그라운드 이미지 사이즈 !!!!! <- 나중 수정*/
-    background-size: 100%;
+    background-size: cover;
 
     float: left;
 }
@@ -187,7 +214,7 @@ nav:hover>.main-menu>li {
 }
 
 /* 폰트 위치 */
-.banner > h3 {
+.banner > .banner_title {
     font-family: 'danjung', sans-serif;
     
     color: #fff;
@@ -208,6 +235,20 @@ nav:hover>.main-menu>li {
 .sub_t {
     opacity: 0.7;
 }
+.b_ani{
+    transform: translateY(50px);
+    opacity: 0;
+    transition: all 1s;
+}
+.b_vis{
+    transform: translateY(0);
+    opacity: 1;
+}
+.b_vis_sub{
+    transform: translateY(0);
+    opacity: 0.7;
+}
+
 
 
 /* 배너 버튼 */
