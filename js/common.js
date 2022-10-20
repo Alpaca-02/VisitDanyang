@@ -8,20 +8,24 @@ $(function(){
 
 
     function nav_colored(){
-        $('nav').css('background-color','rgba(255, 255, 255, 0.8)');
-        $('nav a').css('color','#111')
+        $('nav').css('background-color','rgba(255, 255, 255, 0.6)');
+        $('.main-menu>li>a').css('color','#111')
         .css('text-shadow','none');
         $('#logo>a').css('color','#86c036')
         .css('text-shadow','none');
+        $('.line').css('background-color','#111');
+        $('.side-bar>a, .login-link>a').css('color','#111');
         
     }
 
     function nav_nonColor(){
         $('nav').css('background-color','')
-        $('nav a').css('color','#fff')
+        $('.main-menu>li>a').css('color','#fff')
         .css('text-shadow','3px 3px 3px #222');
         $('#logo>a').css('color','#fff')
         .css('text-shadow','2px 2px 2px #222');
+        $('.line').css('background-color','#fff');
+        $('.side-bar>a, .login-link>a').css('color','#fff');
     }
 
 
@@ -29,20 +33,30 @@ $(function(){
     $('.main-menu').mouseover(function(){
         nav_colored();
         $('.main-menu>li').css('padding','0 50px');
-        $('nav').css('height','20vh');
+        $('nav').css('height','250px');
         $('.sub-menu').stop().slideDown(300,'linear');
-        $('nav a').css('color','#111');
+        $('nav').css('background-image','linear-gradient(to top, rgba(230, 230, 230, 0.5)70% , rgba(255, 255, 255, 0.0) 30%)');
+        
     })
     $('nav').mouseout(function(){
         nav_nonColor();
-        $('nav').css('height','100%');
+        $('nav').css('height','100px');
         $('.sub-menu').stop().slideUp(300,'linear',function(){
             $('.main-menu>li').css('padding','0 40px');
         });
-        $('nav a').css('color','#fff');
+        $('nav').css('background-image','none');
     })
 
 
+    // 햄버거
+    $(".hamburger").click(function(){
+        $(this).toggleClass("is-active");
+    });
+    
+    // 햄버거 클릭시 나오는 메뉴
+    $('.hamburger').click(function(){
+        $('#hidden-menu').slideToggle();
+    })
 
 
 

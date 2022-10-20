@@ -59,6 +59,18 @@ html, body {
     width: 100%;
 }
 
+/* 히든메뉴 */
+#hidden-menu {
+    display: none;
+
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(33,33,33,0.7);
+    z-index: 20;
+}
+
+
 /* 상단메뉴 */
 header {
     position: relative;
@@ -66,14 +78,14 @@ header {
     width: 100%;
     height: 75px;    
 
-    z-index: 40;
+    z-index: 30;
 }
 
 #logo {
     position: absolute;
     font-family: 'dangdang', sans-serif;
 
-    font-size: 2.5em;
+    font-size: 2em;
 
     left: 2%;
     top: 25%;
@@ -95,7 +107,7 @@ header{
 /* 메뉴부분*/
 nav {
     width: 100%;
-    height: 100%;
+    height: 100px;
     display: inline-block;
 
 
@@ -116,24 +128,29 @@ nav {
 
 
 .main-menu>li{
-
-    float: left;
+    display: inline-block;
+    /* float: left; */
+    vertical-align: top;
 
     padding: 0 40px;
     margin-top: 20px;
     box-sizing: border-box;
 
-    transition: all 0.2s;
+    transition: all 0.5s;
 }
 .main-menu>li a {
     font-family: 'happy-bold', sans-serif;
     font-size: 1.2em;
-    color: #fff;
+    
 
     position: relative;
 
-    transition: all 0.2s;
-    text-shadow: 3px 3px 3px #222;
+    transition: all 0.5s;
+    
+}
+.main-menu>li>a{
+    color: #fff;
+    text-shadow: 1px 1px 3px #222;
 }
 
 
@@ -142,29 +159,58 @@ nav {
     display: none;
     position: inline;
 
-    margin-top: 12%;
+    margin-top: 35%;
     text-align: center;
     /* transition: color 0.5s; */
+
+    /* background-color: #fff; */
+    width: 100%;
+
+}
+
+/* 서브메뉴 폰트*/
+.sub-menu li a{
+    color: #555;
 }
 /* 우측 아이콘*/
 .icon-menu{
     position: absolute;
-    right: 5%;
+    right: 2%;
     top: 32%;
-
 }
 .icon-menu>ul>li{
     float: left;
     margin-right: 10px;
-    font-size: 1.5em;
 
     font-family: 'happy-bold', sans-serif;
 
 }
 .icon-menu>ul>li>a{
-    color: #fff;
-    text-shadow: 2px 2px 3px #222;
+    transition: all 1s;
 }
+.search-btn, .menu-btn{
+    font-size: 1.5em;
+}
+.side-bar{
+    font-size: 2em;
+}
+.icon-menu>ul>li>a{
+    color: #fff;
+    text-shadow: 1px 1px 3px #222;
+}
+.login-link {
+    font-size: 1em;
+    position: relative;
+    top: 9px;
+
+    position: relative;
+    z-index: 100;
+}
+
+/* 우측 메뉴아이콘 */
+/* .icon-menu li{
+    vertical-align: bottom
+} */
 
 
 
@@ -255,7 +301,7 @@ nav {
 #banner_btn{
     position: absolute;
     display: flex;
-    top: 60%;
+    top: 50%;
     width: 100%;
     align-content: center;
 
@@ -271,6 +317,27 @@ nav {
     cursor: pointer;
 
     color: #fff;
+}
+
+#banner_icon {
+    position: absolute;
+    display: flex;
+
+    z-index: 10;
+    align-content: center;
+    justify-content: center;
+
+    top: 55%;
+
+    width: 100%;
+}
+.b_icon{
+    margin: 0 5px;
+    cursor: pointer;
+
+}
+.b_icon>img{
+    width: 80px;
 }
 
 /* 단양 추천 여행지 영역 시작 */
@@ -297,3 +364,66 @@ nav {
     background-color: lightgreen;
 }
 /* 단양 이달의 행사 종료 */
+
+
+
+
+
+
+/*햄버거*/
+.menu-btn{
+    position: relative;
+    z-index: 100;
+}
+.three { width: 23.8%; }
+.col {
+	display: block;
+	float:left;
+	margin: 1% 0 1% 1.6%;
+}
+
+.col:first-of-type {
+    margin-left: 0;
+}
+
+.hamburger .line{
+    position:relative; 
+    z-index:100;
+
+    width: 35px;
+    height: 3px;
+    background-color: #fff;
+    display: block;
+    margin: 8px auto;
+    -webkit-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
+}
+.line{
+    box-shadow: 1px 1px 2px #333;
+}
+
+.hamburger:hover{
+    cursor: pointer;
+}
+
+  /* ONE */
+
+#hamburger-1.is-active .line:nth-child(2){
+    opacity: 0;
+}
+
+#hamburger-1.is-active .line:nth-child(1){
+    -webkit-transform: translateY(11px) rotate(45deg);
+    -ms-transform: translateY(11px) rotate(45deg);
+    -o-transform: translateY(11px) rotate(45deg);
+    transform: translateY(11px) rotate(45deg);
+}
+
+#hamburger-1.is-active .line:nth-child(3){
+    -webkit-transform: translateY(-11px) rotate(-45deg);
+    -ms-transform: translateY(-11px) rotate(-45deg);
+    -o-transform: translateY(-11px) rotate(-45deg);
+    transform: translateY(-11px) rotate(-45deg);
+}
+

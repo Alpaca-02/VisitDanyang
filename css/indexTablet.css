@@ -1,4 +1,4 @@
-@media screen and (max-width:1270px) {
+@media screen and (max-width:1300px) {
     
     .main-menu{
         display: none;
@@ -8,7 +8,7 @@
         /* background-size: auto 100%; */
     }
     .banner > .banner_title{
-        font-size: 3em;
+        font-size: 3.3em;
     }
     .banner > p{
         font-size: 1.5em;

@@ -23,6 +23,11 @@
 <body>
 <!-- 전체 틀 -->
 <div id="wrapper">
+
+    <!-- 히든메뉴-->
+    <div id="hidden-menu">
+
+    </div>
     <header>
         <h1 id="logo">
             <a href="index.html">VisitDanyang</a>
@@ -72,9 +77,15 @@
             <div class="icon-menu">
                 <ul>
                     <li class="login-link"><a href="#">로그인</a></li>
-                    <li><a>|</a></li>
-                    <li class="search-btn"><a href="#"><i class="fa-solid fa-magnifying-glass"></i></a></li>
-                    <li class="menu-btn"><a href="#"><i class="fa-solid fa-bars"></i></a></li>
+                    <li class="side-bar"><a>|</a></li>
+                    <!-- <li class="search-btn"><a href="#"><i class="fa-solid fa-magnifying-glass"></i></a></li> -->
+                    <li class="menu-btn">
+                            <div class="hamburger" id="hamburger-1">
+                                <span class="line"></span>
+                                <span class="line"></span>
+                                <span class="line"></span>
+                            </div>
+                    </li>
                 </ul>
             </div>
         </nav>
@@ -117,6 +128,13 @@
             <div class="c_btn c_btn2"><i class="fa-regular fa-circle"></i></div>
             <div class="c_btn c_btn3"><i class="fa-regular fa-circle"></i></div>
             <div class="c_btn c_btn4"><i class="fa-regular fa-circle"></i></div>
+        </div>
+
+        <div id="banner_icon">
+            <div class="b_icon"><img src="./images/icon/apple.png" alt="apple"></div>
+            <div class="b_icon"><img src="./images/icon/bibim.png" alt="taxi"></div>
+            <div class="b_icon"><img src="./images/icon/room.png" alt="room"></div>
+            <div class="b_icon"><img src="./images/icon/taxi.png" alt="taxi"></div>
         </div>
         
     </section>
